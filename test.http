@@ -1,0 +1,80 @@
+### Ver todos los roles
+GET http://127.0.0.1:8000/roles
+
+### Ver todas las categorias
+GET http://127.0.0.1:8000/categorias
+
+### Ver todos los productos
+GET http://127.0.0.1:8000/productos
+
+### Ver todos los usuarios
+GET http://127.0.0.1:8000/usuarios
+
+### Ver todos los puntos de entrega
+GET http://127.0.0.1:8000/puntos
+
+### Ver todos los pedidos
+GET http://127.0.0.1:8000/pedidos
+
+### Crear un producto
+POST http://127.0.0.1:8000/productos
+content-type: application/json
+
+{
+    "nombre": "Mango",
+    "descripcion": "Mango fresco",
+    "precio": 5000,
+    "stock": 100,
+    "id_categoria": 1
+}
+
+### Crear un usuario
+POST http://127.0.0.1:8000/usuarios
+content-type: application/json
+
+{
+    "nombre": "o0ptro",
+    "correo": "nada@gmail.com",
+    "password": "1234",
+    "telefono": "3001234567",
+    "id_rol": 1
+}
+
+### Crear un pedido
+POST http://127.0.0.1:8000/pedidos
+content-type: application/json
+
+{
+    "id_usuario": 2,
+    "estado": "pendiente",
+    "total": 500000,
+    "id_punto_entrega": 1
+}
+
+### Ver un producto por ID
+GET http://127.0.0.1:8000/productos/1
+
+### Ver un usuario por ID
+GET http://127.0.0.1:8000/usuarios/10
+
+### Actualizar un producto
+PUT http://127.0.0.1:8000/productos/1
+content-type: application/json
+
+{
+    "nombre": "Mango Tommy",
+    "descripcion": "Mango fresco ",
+    "precio": 7000,
+    "stock": 80,
+    "id_categoria": 1
+}
+
+### Borrar un producto
+DELETE http://127.0.0.1:8000/productos/1
+
+### Borrar un usuario
+DELETE http://127.0.0.1:8000/usuarios/17
+
+
+### Borrar un pedido
+DELETE http://127.0.0.1:8000/pedidos/1
